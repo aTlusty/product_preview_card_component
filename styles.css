@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, Fraunces 
+}
+
+p{
+    font-size: 14px;
+}
+
+:root{
+    --cream: hsl(30, 38%, 92%);
+    --dark-cyan: hsl(158, 36%, 37%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-greyish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+}
+
+body{
+    background: var(--cream);
+}
+
+.image2{
+    display: none;
+}
+
+.card-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: white;
+    width: 620px;
+    height: 460px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.photo{
+    object-position: center;
+    width: 60%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+.preview{
+    color: var(--dark-greyish-blue);
+    letter-spacing: .3rem;
+    margin-bottom: 20px;
+}
+
+.name{
+    font-weight: bold;
+    max-width: 230px;
+    font-size: 35px;
+    font-family: Fraunces;
+    line-height: 38px;
+    margin-bottom: 25px;
+}
+
+.description{
+    font-size: 15px;
+    color: var(--dark-greyish-blue);
+    line-height: 23px;
+    margin-bottom: 30px;
+    max-width: 250px;
+}
+
+.prices{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.price-sale{
+    color: var(--dark-cyan);
+    font-family: Fraunces;
+    font-size: 32px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+.price{
+    color: var(--dark-greyish-blue);
+    text-decoration: line-through;
+}
+
+.btn-cart{
+    position: relative;
+}
+
+.add-to-cart{
+    background-color: var(--dark-cyan);
+    border: none;
+    padding: 15px;
+    width: 250px;
+    border-radius: 7px;
+    color: var(--white);
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+.cart{
+    position: absolute;
+    top: 15px;
+    left: 60px;
+}
+
+@media all and (max-width: 375px) {
+
+    body{
+        height: 110vh;
+    }
+
+    .photo{
+        display: none;
+    }
+
+    .card-container{
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        height: 650px;
+        width: 325px;
+        padding-bottom: 30px;
+    }
+
+    .image2{
+        display: flex;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .name{
+        max-width: 400px;
+    }
+
+    .description{
+        max-width: 315px;
+        margin-top: -10px
+    }
+
+    .prices{
+        margin-top: -10px;
+    }
+
+    .btn-cart{
+        display: flex;
+        justify-content: center;
+    }
+
+    .attribution{
+        display: none;
+    }
+}
+
